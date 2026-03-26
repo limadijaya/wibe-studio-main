@@ -1,3 +1,21 @@
+# Project Name: [Wibe Studio Main]
+
+## 🌐 Live Demo
+
+- URL: (https://ja6gwnp5d3.us-east-1.awsapprunner.com/)
+- CI/CD Status: ![Build Status](https://github.com/limadijaya/wibe-studio-main/actions/runs/23587661290)
+
+## 🛠 Tech Stack
+
+- **Frontend:** React.js, Styled Components, Locomotive Scroll
+- **Cloud:** AWS (S3, CloudFront, CloudWatch)
+- **CI/CD:** GitHub Actions
+
+## 📈 Monitoring & Scaling
+
+- Menggunakan CloudWatch untuk memantau trafik.
+- Strategi Scaling menggunakan CloudFront Edge Locations untuk optimasi aset video.
+
 # 🔥Build a Stunning Fashion Studio Website with React JS [ Locomotive Scroll + GSAP + Framer Motion ]
 
 ![GitHub stars](https://img.shields.io/github/stars/codebucks27/wibe-studio-starter-files?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
@@ -14,19 +32,18 @@ checkout following **Tutorial** to learn👇: <br />
 
 [![YouTube Video Views](https://img.shields.io/youtube/views/Ra1Fsa9YJCk?style=social)](https://youtu.be/Ra1Fsa9YJCk)<br />
 
-
 ### Images of The Fashion Studio Website:
+
 ![HOME](https://github.com/codebucks27/wibe-studio-starter-files/blob/main/Wibe-Home-Desktop.png)
 ![ABOUT](https://github.com/codebucks27/wibe-studio-starter-files/blob/main/Wibe-About-Desktop.png)
 ![HOME](https://github.com/codebucks27/wibe-studio-starter-files/blob/main/Wibe-Home-Moblie.png)
 ![ABOUT](https://github.com/codebucks27/wibe-studio-starter-files/blob/main/Wibe-About-Mobile.png)
 
-
 ### Resources Used in This Project
 
 Fonts: https://fontsource.org/ <br />
 
-### External Libraries used in this project: 
+### External Libraries used in this project:
 
 [styled-components](https://styled-components.com/docs/advanced) <br />
 [GSAP](https://greensock.com/gsap/) <br />
@@ -83,13 +100,11 @@ https://www.pexels.com/@raulkingr<br />
 Yellow Dress: Photo by Godisable Jacob from Pexels<br />
 https://www.pexels.com/@godisable-jacob-226636<br />
 
-
-
 ### Famous Quotes Used:
+
 "Fashion is the armour to survive the reality of everyday life."<br />
 -- bill cunningham
 
 "One is never over-dressed or under-dressed with a Little Black Dress." —Karl Lagerfeld<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
