@@ -1,0 +1,41 @@
+name: Deploy to Amazon ECR
+
+on:
+  push:
+    branches: [main] # Pipeline jalan otomatis saat kamu push ke branch main
+
+jobs:
+  deploy:
+    name: Build and Push to ECR
+    runs-on: ubuntu-latest # Robot menggunakan server Linux milik GitHub
+
+    steps:
+      # 1. Mengambil kode terbaru dari repository kamu
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # 2. Login ke AWS menggunakan Secret yang kita buat di Langkah 1
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1 # Region US (sesuaikan dengan ECR kamu)
+
+      # 3. Mendapatkan izin akses ke Docker Registry AWS (ECR)
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      # 4. Proses Build Docker Image & Push ke AWS ECR
+      - name: Build, Tag, and Push Image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: wibe-studio-main # Pastikan nama ini SAMA dengan di AWS ECR
+          IMAGE_TAG: latest
+        run: |
+          # Build image berdasarkan Dockerfile di root
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+
+          # Kirim image yang sudah jadi ke cloud AWS
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
