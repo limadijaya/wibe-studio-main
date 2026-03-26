@@ -1,3 +1,5 @@
+[![Deploy to Amazon ECR](https://github.com/limadijaya/wibe-studio-main/actions/workflows/deploy.yml/badge.svg)](https://github.com/limadijaya/wibe-studio-main/actions/workflows/deploy.yml)
+
 # Project Name: [Wibe Studio Main]
 
 ## 🌐 Live Demo
